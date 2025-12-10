@@ -8,6 +8,9 @@ const PORT = process.env.PORT || 3000;
 //Archivos estaticos
 app.use(express.static(path.join(__dirname, '../public')));
 
+// favicon
+app.get('/favicon.ico', (req, res) => res.status(204).end());
+
 //Ruta Pcal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
