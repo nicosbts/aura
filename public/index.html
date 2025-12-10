@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bebidas - Aura</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Drinks</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <h1>🍹 Aura - Bebidas Premium</h1>
-        <p>Descubre nuestras bebidas seleccionadas</p>
-    </header>
-
-    <main>
-        <section class="bebidas-container">
-            <div class="bebida-card">
-                <h2>Agua Mineral</h2>
-                <p>Refrescante y pura</p>
-                <span class="precio">$2.50</span>
-            </div>
-
-            <div class="bebida-card">
-                <h2>Jugo Natural</h2>
-                <p>Hecho con frutas frescas</p>
-                <span class="precio">$4.00</span>
-            </div>
-
-            <div class="bebida-card">
-                <h2>Café Artesanal</h2>
-                <p>Grano premium seleccionado</p>
-                <span class="precio">$3.50</span>
-            </div>
-
-            <div class="bebida-card">
-                <h2>Té Verde</h2>
-                <p>Antioxidantes naturales</p>
-                <span class="precio">$3.00</span>
-            </div>
-
-            <div class="bebida-card">
-                <h2>Smoothie Tropical</h2>
-                <p>Mango, piña y coco</p>
-                <span class="precio">$5.50</span>
-            </div>
-
-            <div class="bebida-card">
-                <h2>Horchata Casera</h2>
-                <p>Receta tradicional</p>
-                <span class="precio">$3.25</span>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Aura. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="index.js"></script>
+<header class="hero">
+  <div class="hero__overlay">
+    <nav class="nav" aria-label="Principal">
+      <div class="nav__brand">
+        <!-- logo  -->
+        <span class="brand__text">aura</span>
+      </div>
+      <div class="nav__actions">
+        <a href="#categorias">Categorías</a>
+        <a href="#vinos">Vinos</a>
+        <a href="#whisky">Whisky</a>
+        <a href="#accesorios">Accesorios</a>
+        <a href="#por-que">¿Por qué Aura?</a>
+      </div>
+    </nav>
+    <div class="hero__content">
+      <p class="eyebrow">Bebidas Premium</p>
+      <h1>Las mejores bebidas para cada ocasión</h1>
+      <p class="lead">Vinos de prestigio, whiskies selectos, licores icónicos y cervezas exclusivas.</p>
+      <a class="button" href="#comprar">Comprar</a>
+    </div>
+  </div>
+  <div class="hero__categories" id="categorias">
+    <!-- 4 tarjetas de categoría -->
+    <article class="category-card">
+      <figure>
+        <img src="images/categoria-vino.jpg" alt="Botella de vino tinto" loading="lazy">
+        <figcaption>Vino</figcaption>
+      </figure>
+    </article>
+    <article class="category-card">
+      <figure>
+        <img src="images/categoria-whisky.jpg" alt="Botella de whisky" loading="lazy">
+        <figcaption>Whisky</figcaption>
+      </figure>
+    </article>
+    <article class="category-card">
+      <figure>
+        <img src="images/categoria-licor.jpg" alt="Botella de licor" loading="lazy">
+        <figcaption>Licor</figcaption>
+      </figure>
+    </article>
+    <article class="category-card">
+      <figure>
+        <img src="images/categoria-cerveza.jpg" alt="Botella de cerveza" loading="lazy">
+        <figcaption>Cerveza</figcaption>
+      </figure>
+    </article>
+  </div>
+</header>
+  <script src="index.js"></script>
 </body>
 </html>
