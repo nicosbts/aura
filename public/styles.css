@@ -189,7 +189,7 @@ body {
   width: auto;
   display: block;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* Blanco sobre fondo oscuro */
+  /* filter: brightness(0) invert(1); /* Blanco sobre fondo oscuro */
 }
 /**/
 /* Sección PROMO */
