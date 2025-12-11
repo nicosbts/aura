@@ -8,16 +8,17 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body style="background-image: url('img/FondoCampañaDeBMenor.jpg'); background-size: cover; background-attachment: fixed; background-position: center;">
-<header class="hero">
-  <div class="hero__overlay">
-    <nav class="nav" aria-label="Principal">
-      <div class="nav__brand">
-        <!-- logo  -->
-        <img src="img/Logoaura.png" alt="Logo Aura" class="brand__logo">
-      </div>
-    </nav>
+
+<!-- ===== NAVEGACIÓN ===== -->
+<nav class="nav" aria-label="Principal">
+  <div class="nav__brand">
+    <img src="img/Logoaura.png" alt="Logo Aura" class="brand__logo">
   </div>
-    <div class="hero__categories" id="categorias">
+</nav>
+
+<!-- ===== CARRUSEL ===== -->
+<section class="hero" id="categorias">
+  <div class="hero__categories">
     <!-- Controles del carrusel -->
     <button class="carousel-control carousel-control--prev" aria-label="Anterior">
       ‹
@@ -107,17 +108,27 @@
     
     <!-- Indicadores (puntos) -->
     <div class="carousel-indicators">
-      <button class="indicator active" aria-label="Ir a grupo 1"></button>
-      <button class="indicator" aria-label="Ir a grupo 2"></button>
-      <button class="indicator" aria-label="Ir a grupo 3"></button>
+      <button class="indicator active" data-index="0" aria-label="Ir a imagen 1"></button>
+      <button class="indicator" data-index="1" aria-label="Ir a imagen 2"></button>
+      <button class="indicator" data-index="2" aria-label="Ir a imagen 3"></button>
+      <button class="indicator" data-index="3" aria-label="Ir a imagen 4"></button>
+      <button class="indicator" data-index="4" aria-label="Ir a imagen 5"></button>
+      <button class="indicator" data-index="5" aria-label="Ir a imagen 6"></button>
+      <button class="indicator" data-index="6" aria-label="Ir a imagen 7"></button>
+      <button class="indicator" data-index="7" aria-label="Ir a imagen 8"></button>
+      <button class="indicator" data-index="8" aria-label="Ir a imagen 9"></button>
+      <button class="indicator" data-index="9" aria-label="Ir a imagen 10"></button>
+      <button class="indicator" data-index="10" aria-label="Ir a imagen 11"></button>
     </div>
   </div>
-  </div>
-  <div class="hero__content">
-      <a class="button" href="#comprar">Comprar</a>
-      <h1>Las mejores bebidas para cada ocasión</h1>
-    </div>
-</header>
+</section>
+
+<!-- ===== CONTENIDO SOBRE CARRUSEL ===== -->
+<section class="hero__content">
+  <a class="button" href="#comprar">Comprar</a>
+  <h1>Las mejores bebidas para cada ocasión</h1>
+</section>
+
 <main>
   <section class="intro" aria-labelledby="intro-title">
     <div class="intro__media">
