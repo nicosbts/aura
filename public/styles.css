@@ -38,9 +38,170 @@ main .lead {
   padding: 60px 20px;
   text-align: center;
   background: transparent;
-  color: #fff;
+  color: rgb(255, 230, 87);
   font-family: 'Helvetica Neue', sans-serif;
 }
+
+#whisky .section-heading img {
+  border-radius: 20px;
+  float: left;
+  margin-right: 10rem;
+  margin-left: 1rem;
+  width: 700px;
+  height: auto;
+ }
+
+#whisky .whisky-title h1 {
+  font-family: Cambria, Cochin, Georgia, Times;
+  color: rgb(255, 230, 87);
+  margin-left: 10rem;
+  font-size: 40px;
+}
+
+#whisky .section-subtitle{
+  font-size: 20px;
+ display: flex; 
+  max-width: 900px;
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 10rem;
+}
+
+#whisky .collection__grid{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1px;
+  justify-content: center;
+  margin-top: 1px;
+  margin-left: 10rem;
+}
+
+#whisky .product-card img {
+  border: 3px solid rgb(255, 230, 87);
+  border-radius: 100px;
+}
+
+#whisky .product-card {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 10px;
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+#whyski .product-card:hover {
+  transform: scale(1.05);
+}
+
+#whisky .product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .section-heading img {
+    float: none;
+    margin-right: 0;
+    max-width: 100%;
+    padding: 20px 0;
+  }
+  
+  .collection__grid {
+    gap: 20px;
+  }
+}
+
+/* Sección accesorios */
+#accesorios {
+  padding: 60px 20px;
+  text-align: center;
+  background: transparent;
+  color: rgb(255, 230, 87);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+#accesorios .section-heading img {
+  border-radius: 20px;
+  float: right;
+  margin-right: 10rem;
+  margin-left: 1rem;
+  width: 700px;
+  height: auto;
+ }
+
+#accesorios .whisky-title h1 {
+  font-family: Cambria, Cochin, Georgia, Times;
+  color: rgb(255, 230, 87);
+  margin-left: 10rem;
+  font-size: 40px;
+}
+
+#accesorios .section-subtitle{
+  font-size: 20px;
+ display: flex; 
+  max-width: 900px;
+  margin: 20px 0;
+  line-height: 1.6;
+  color: #ffffff;
+  text-align: center;
+  margin-left: 10rem;
+}
+
+#accesorios .collection__grid{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1px;
+  justify-content: center;
+  margin-top: 1px;
+  margin-left: 10rem;
+}
+
+#accesorios .product-card img {
+  border: 3px solid rgb(255, 230, 87);
+  border-radius: 100px;
+}
+
+#accesorios .product-card {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 10px;
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+#accesorios .product-card:hover {
+  transform: scale(1.05);
+}
+
+#accesorios .product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .section-heading img {
+    float: none;
+    margin-right: 0;
+    max-width: 100%;
+    padding: 20px 0;
+  }
+  
+  .collection__grid {
+    gap: 20px;
+  }
+}
+
+
 /**/
 .brand-strip {
   padding: 40px 20px;
@@ -135,7 +296,7 @@ main .lead {
 }
 
 .reason-card {
-   background: rgba(255, 255, 255, 0.1); /* capa semitransparente */
+  background: rgba(255, 255, 255, 0.1); /* capa semitransparente */
   backdrop-filter: blur(10px);           /* desenfoque del fondo */
   -webkit-backdrop-filter: blur(10px);   /* soporte en Safari */
   padding: 20px;
