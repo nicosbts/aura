@@ -1,0 +1,55 @@
+/* Tipografía general */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero principal */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Contenido principal */
+.hero__content {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.brand__logo {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.eyebrow {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #ffd700;
+  text-transform: uppercase;
+}
+
+.hero__content h1 {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.lead {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #ffd700;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
