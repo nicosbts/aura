@@ -235,6 +235,10 @@ article.category-card figure{
 /* ===========================
    VINOS SECTION
    =========================== */
+    #vinos {
+    margin-top: 9rem;
+  }
+  
 #vinos .product-card img {
   border: 3px solid rgb(255, 230, 87);
   border-radius: 100px;
