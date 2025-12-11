@@ -2,101 +2,216 @@ body {
   font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
 }
-.carousel-track{
-  display: flex;
-}
-.category-card {
-  /* eliminar ancho fijo; las tarjetas usan flex para encajar hasta 4 por pantalla */
-  width: auto;
-}
 
 /* Slider responsive y llamativo */
 :root{
-  --carousel-gap: 8px; /* menos separación entre imágenes */
-  --carousel-visible: 4; /* máximo de imágenes visibles en pantallas grandes */
+  --carousel-gap: 12px;
+  --carousel-visible: 4;
+  --item-width: calc((100% - (var(--carousel-visible) - 1) * var(--carousel-gap)) / var(--carousel-visible));
 }
 
-/* contenedor principal del slider (si existe una clase padre llamada .carousel) */
+/* contenedor principal del slider */
 .carousel,
 .hero__categories{
   width: 100%;
-  overflow: hidden; /* oculta el resto y evita solapamientos */
+  overflow: hidden;
   box-sizing: border-box;
-  padding: 8px 6px; /* menos padding para acercar los items a los bordes */
+  padding: 20px;
+  position: relative;
 }
 
-/* pista que contiene los items -- usamos variables para calcular el ancho de cada item */
+/* pista que contiene los items */
 .carousel-track{
   display: flex;
   gap: var(--carousel-gap);
   align-items: stretch;
-  transition: transform 0.4s cubic-bezier(.22,.9,.36,1);
+  transition: transform 0.5s ease-in-out;
   will-change: transform;
+}
+
+.carousel-track.no-transition {
+  transition: none;
 }
 
 .carousel-item,
 .category-card {
-  /* eliminar ancho fijo; las tarjetas usan flex para encajar hasta 4 por pantalla */
-  width: auto;
-  padding: 0; /* eliminar padding interno para unir más las imágenes */
+  flex: 0 0 auto; /* el ancho se adapta al contenido (imagen) */
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  background: transparent; /* eliminar fondo fijo */
 }
 
-/* Reset para figuras dentro de tarjetas (evita márgenes por defecto) */
+/* Reset para figuras dentro de tarjetas */
 article.category-card figure{
   margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Imagen dentro de cada item: no se solapan y ocupan todo el item */
-/* Imagen dentro de cada item: no se solapan y ocupan todo el item */
+.category-card figcaption {
+  padding: 8px 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Imagen dentro de cada item */
 .carousel-item img,
 .category-card img,
 .carousel-track img{
   display: block;
-  width: 100%;
-  height: auto; /* evitar usar height:100% cuando el padre no tiene altura explícita */
-  max-height: 60vh; /* las imágenes no superarán el alto visible de la ventana */
-  object-fit: cover; /* recorta si es necesario pero sin deformar */
-  border-radius: 1px;
+  width: auto; /* ancho natural de la imagen */
+  max-width: none;
+  height: auto; /* mantener escala natural */
+  max-height: 300px; /* limitar altura para consistencia */
+  object-fit: contain;
+  border-radius: 8px;
+  background: transparent; /* quitar fondo blanco */
 }
 
-/* Asegura que cada item tenga una altura coherente para evitar saltos */
+/* Asegura que cada item tenga una altura coherente */
 .carousel-item,
 .category-card{
-  min-height: 140px;
-  overflow: hidden;
+  min-height: 0;
+  overflow: visible;
+  border-radius: 8px;
 }
 
-/* Media queries para reducir la cantidad visible en pantallas pequeñas */
-@media (max-width: 1200px){
-  :root{ --carousel-visible: 3; }
+/* Controles del carrusel */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  color: #333;
+  font-weight: bold;
 }
 
-@media (max-width: 900px){
-  :root{ --carousel-visible: 2; }
-  .carousel-item{ min-height: 120px; }
+.carousel-control:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
 }
 
-@media (max-width: 600px){
-  :root{ --carousel-visible: 1; }
-  .carousel{ padding: 8px 4px; }
-  .carousel-item{ min-height: 180px; }
+.carousel-control--prev {
+  left: 10px;
+}
+
+.carousel-control--next {
+  right: 10px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: rgba(255, 255, 255, 1);
+  width: 30px;
+  border-radius: 6px;
 }
 
 /* Pequeños toques visuales */
 .category-card img,
 .carousel-item img{
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.category-card img:hover,
-.carousel-item img:hover{
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-/* Evita que elementos se solapen por posicionamiento absoluto en el slider */
-.carousel *{ position: relative; }
+.category-card:hover img,
+.carousel-item:hover img{
+  transform: scale(1.05);
+}
 
-/* Backwards-compatible small reset for images elsewhere */
+/* Media queries para reducir la cantidad visible en pantallas pequeñas */
+@media (max-width: 1200px){
+  :root{ 
+    --carousel-visible: 3;
+  }
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px){
+  :root{ 
+    --carousel-visible: 2;
+  }
+  .carousel-item,
+  .category-card {
+    min-height: 250px;
+  }
+  .carousel-item img,
+  .category-card img {
+    height: 250px;
+  }
+  .carousel-control {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px){
+  :root{ 
+    --carousel-visible: 1;
+  }
+  .hero__categories{
+    padding: 20px 10px;
+  }
+  .carousel-item,
+  .category-card {
+    min-height: 350px;
+  }
+  .carousel-item img,
+  .category-card img {
+    height: 350px;
+  }
+  .carousel-control {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .carousel-control--prev {
+    left: 5px;
+  }
+  .carousel-control--next {
+    right: 5px;
+  }
+}
+
+/* Backwards-compatible reset for images elsewhere */
 img{ max-width:100%; height:auto; }
