@@ -36,7 +36,7 @@ main .lead {
 /* Sección WHISKY */
 #whisky {
   padding: 60px 20px;
-  text-align: center;
+  text-align: left;
   background: transparent;
   color: rgb(255, 230, 87);
   font-family: 'Helvetica Neue', sans-serif;
@@ -45,8 +45,8 @@ main .lead {
 #whisky .section-heading img {
   border-radius: 20px;
   float: left;
-  margin-right: 10rem;
-  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-left: 10rem;
   width: 700px;
   height: auto;
  }
@@ -65,7 +65,7 @@ main .lead {
   margin: 20px 0;
   line-height: 1.6;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   margin-left: 10rem;
 }
 
