@@ -212,12 +212,31 @@ article.category-card figure{
     right: 5px;
   }
 }
+.intro {
+  display: flex;
+  align-items: center;   
+  gap: 20px;             
+  padding: 20px;
+}
+
+.intro__media img {
+  max-width: 700px;      
+  width: 100%;
+  height: auto;
+  border-radius: 10px;   
+}
+
+.intro__text {
+  flex: 1;               /* El texto ocupa el espacio restante */
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
 
 /* ===========================
    FOOTER STYLING
    =========================== */
 .footer {
-  background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  
   color: #d4af37;
   padding: 40px 20px 30px;
   text-align: center;
