@@ -40,6 +40,7 @@ main .lead {
   background: transparent;
   color: rgb(255, 230, 87);
   font-family: 'Helvetica Neue', sans-serif;
+  margin-top: 9rem;
 }
 
 #whisky .section-heading img {
@@ -93,7 +94,7 @@ main .lead {
   width: 180px;
   transition: transform 0.3s ease;
 }
-#whyski .product-card:hover {
+#whisky .product-card:hover {
   transform: scale(1.05);
 }
 
@@ -120,10 +121,13 @@ main .lead {
 /* Sección accesorios */
 #accesorios {
   padding: 60px 20px;
-  text-align: center;
+  text-align: left;
   background: transparent;
   color: rgb(255, 230, 87);
   font-family: 'Helvetica Neue', sans-serif;
+  margin-top: 9rem;
+  margin-left: 10rem;
+  margin-bottom: 9rem;
 }
 
 #accesorios .section-heading img {
@@ -135,7 +139,7 @@ main .lead {
   height: auto;
  }
 
-#accesorios .whisky-title h1 {
+#accesorios .Acc-title h1 {
   font-family: Cambria, Cochin, Georgia, Times;
   color: rgb(255, 230, 87);
   margin-left: 10rem;
@@ -150,7 +154,7 @@ main .lead {
   line-height: 1.6;
   color: #ffffff;
   text-align: center;
-  margin-left: 10rem;
+
 }
 
 #accesorios .collection__grid{
@@ -161,7 +165,7 @@ main .lead {
   gap: 1px;
   justify-content: center;
   margin-top: 1px;
-  margin-left: 10rem;
+  
 }
 
 #accesorios .product-card img {
