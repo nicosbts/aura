@@ -1,7 +1,6 @@
 /* Tipografía general */
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -116,67 +115,47 @@ body {
   display: block;
   object-fit: contain;
 }
-/**/
-#accesorios {
-  padding: 60px 20px;
-  text-align: center;
-  background: transparent;
-  color: #fff;
-  font-family: 'Helvetica Neue', sans-serif;
+/*---------------------------------*/
+/* Aplica solo a la imagen dentro de .section-heading */
+.section-heading img {
+  float: right;          /* mueve la imagen a la izquierda */
+  margin-right: 1rem;   /* agrega espacio entre la imagen y el texto */
+  max-width: 650px;     /* opcional: controla el tamaño de la imagen */
+  padding: 50px;
 }
 
-/* Encabezado */
-#accesorios .section-heading .eyebrow {
-  font-size: 0px; /* Oculto */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
-#accesorios .section-heading h1 {
-  font-size: 48px;
-  margin: 0 0 10px 0;
-  font-weight: bold;
-  text-align: left;
-  line-height: 1.2;
-  letter-spacing: -1px;
-}
-
-#accesorios .section-heading .section-subtitle {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 20px auto;
-  line-height: 1.6;
-  color: #ddd;
-  text-align: left;
-}
-
+/*-----------------------------------------*/
 /* Grid de productos */
-#accesorios .collection__grid {
+.collection__grid {
+  position: relative;
+  z-index: 1;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 40px;
-  margin-top: 50px;
   flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
 }
 
 /* Tarjetas de producto */
-#accesorios .product-card {
-  flex: 0 1 150px;
+.product-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 10px;
+  width: 180px;
   transition: transform 0.3s ease;
 }
 
-#accesorios .product-card:hover {
+.product-card:hover {
   transform: scale(1.05);
 }
 
-#accesorios .product-card img {
+.product-card img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 8px;
 }
 /**/
 .brand-strip {
@@ -215,7 +194,6 @@ body {
 /**/
 /* Sección PROMO */
 .promo {
-  background: linear-gradient(to right, #3c1f0f, #5a2e1c);
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -238,7 +216,6 @@ body {
 .promo__content .button {
   display: inline-block;
   background-color: #f4c16d;
-  color: #000;
   padding: 12px 24px;
   font-weight: bold;
   text-decoration: none;
@@ -252,7 +229,6 @@ body {
 
 /* Sección REASONS */
 .reasons {
-  background: #1c1c1c;
   color: #fff;
   padding: 60px 20px;
   text-align: center;
@@ -262,8 +238,15 @@ body {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #aaa;
+  color: black;
   margin-bottom: 10px;
+  display: inline-block;
+  background-color: #f4c16d;
+  padding: 12px 24px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
 .section-heading h2 {
@@ -280,7 +263,9 @@ body {
 }
 
 .reason-card {
-  background: #2a2a2a;
+   background: rgba(255, 255, 255, 0.1); /* capa semitransparente */
+  backdrop-filter: blur(10px);           /* desenfoque del fondo */
+  -webkit-backdrop-filter: blur(10px);   /* soporte en Safari */
   padding: 20px;
   border-radius: 8px;
   width: 280px;
@@ -304,7 +289,6 @@ body {
 
 /* Sección MAPA */
 .map {
-  background: #0f0f0f;
   color: #fff;
   padding: 60px 20px;
   text-align: center;
