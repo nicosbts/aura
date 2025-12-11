@@ -332,6 +332,3 @@ article.category-card figure{
     gap: 20px;
   }
 }
-
-/* Backwards-compatible reset for images elsewhere */
-img{ max-width:100%; height:auto; }
