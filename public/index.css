@@ -175,8 +175,7 @@ article.category-card figure{
 
 .hero__content h1 {
  font-family: Cambria, Cochin, Georgia, Times;
-  color: gold;
-  margin-left: 10rem;
+  color: rgb(255, 230, 87);
   font-size: 40px;
 }
 
@@ -237,14 +236,14 @@ article.category-card figure{
    VINOS SECTION
    =========================== */
 #vinos .product-card img {
-  border: 3px solid gold;
+  border: 3px solid rgb(255, 230, 87);
   border-radius: 100px;
 
 }
 
 #vinos .section-heading h1 {
   font-family: Cambria, Cochin, Georgia, Times;
-  color: gold;
+  color: rgb(255, 230, 87);
   margin-left: 10rem;
   font-size: 40px;
 }
