@@ -9,24 +9,18 @@
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-  background: rgba(0, 0, 0, 0.7);
-  position: relative;
-  z-index: 100;
-  width: 100%;
-  box-sizing: border-box;
+  justify-content: center;
+  
 }
 
-.nav__brand {
-  display: flex;
+
+
+.brand__logo {
+  max-width: 200px;
+  height: auto;
   align-items: center;
 }
 
-.brand__logo {
-  max-width: 150px;
-  height: auto;
-}
 
 /* ===== CARRUSEL ===== */
 .hero {
@@ -168,14 +162,13 @@ article.category-card figure{
 
 /* ===== CONTENIDO SOBRE CARRUSEL ===== */
 .hero__content {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
   padding: 40px 20px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
   z-index: 50;
 }
@@ -243,56 +236,43 @@ article.category-card figure{
 /* ===========================
    VINOS SECTION
    =========================== */
-.collection {
-  padding: 60px 20px;
-  text-align: center;
-  background: transparent;
-  color: #fff;
-  font-family: 'Helvetica Neue', sans-serif;
+#vinos .product-card img {
+  border: 3px solid gold;
+  border-radius: 100px;
+
 }
 
-.section-heading {
-  text-align: left;
-  margin-bottom: 40px;
+#vinos .section-heading h1 {
+  color: gold;
 }
-
-.section-heading h1 {
-  font-size: 48px;
-  margin: 0 0 10px 0;
-  font-weight: bold;
-  line-height: 1.2;
-  letter-spacing: -1px;
-  color: #fff;
-}
-
-.section-heading .section-subtitle {
+#vinos .section-heading .section-subtitle {
   font-size: 18px;
   max-width: 700px;
   margin: 20px 0;
   line-height: 1.6;
-  color: #ddd;
+  color: #ffffff;
   text-align: left;
 }
-
-.section-heading img {
+#vinos .section-heading img {
+  border-radius: 20px;
   float: right;
   margin-right: 1rem;
   max-width: 650px;
   padding: 50px;
-}
 
-.collection__grid {
+ }
+#vinos .collection__grid {
   position: relative;
   z-index: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  flex-wrap: nowrap;
+  gap: 1px;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 1px;
 }
 
-.product-card {
-  background: rgba(255, 255, 255, 0.05);
+#vinos .product-card {
+ 
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   border-radius: 12px;
@@ -301,11 +281,11 @@ article.category-card figure{
   transition: transform 0.3s ease;
 }
 
-.product-card:hover {
+#vinos .product-card:hover {
   transform: scale(1.05);
 }
 
-.product-card img {
+#vinos .product-card img {
   width: 100%;
   height: auto;
   display: block;
