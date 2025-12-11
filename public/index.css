@@ -174,10 +174,10 @@ article.category-card figure{
 }
 
 .hero__content h1 {
-  margin: 20px 0 0 0;
-  font-size: 2.5rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+ font-family: Cambria, Cochin, Georgia, Times;
+  color: gold;
+  margin-left: 10rem;
+  font-size: 40px;
 }
 
 .hero__content .button {
@@ -243,24 +243,29 @@ article.category-card figure{
 }
 
 #vinos .section-heading h1 {
+  font-family: Cambria, Cochin, Georgia, Times;
   color: gold;
+  margin-left: 10rem;
+  font-size: 40px;
 }
 #vinos .section-heading .section-subtitle {
-  font-size: 18px;
-  max-width: 700px;
+  font-size: 20px;
+  max-width: 900px;
   margin: 20px 0;
   line-height: 1.6;
   color: #ffffff;
   text-align: left;
+  margin-left: 10rem;
 }
 #vinos .section-heading img {
   border-radius: 20px;
   float: right;
-  margin-right: 1rem;
-  max-width: 650px;
-  padding: 50px;
-
+  margin-right: 10rem;
+  margin-left: 1rem;
+  width: 700px;
+  height: auto;
  }
+
 #vinos .collection__grid {
   position: relative;
   z-index: 1;
@@ -269,6 +274,7 @@ article.category-card figure{
   gap: 1px;
   justify-content: center;
   margin-top: 1px;
+  margin-left: 10rem;
 }
 
 #vinos .product-card {
@@ -382,10 +388,14 @@ article.category-card figure{
   width: 100%;
   height: auto;
   border-radius: 10px;   
+  margin-left: 10rem;
 }
 
 .intro__text {
-  flex: 1;               /* El texto ocupa el espacio restante */
-  font-size: 1.1rem;
+               /* El texto ocupa el espacio restante */
+  font-size: 30px;
   line-height: 1.5;
+  max-width: 1000px;
+  margin-right: 10rem;
+  margin-left: 1rem;
 }
